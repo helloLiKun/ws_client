@@ -29,8 +29,8 @@ public class WebServlet extends HttpServlet {
         Service service = new ObjectServiceFactory().create(IgetCKXX.class);
         XFireProxyFactory factory = new XFireProxyFactory(XFireFactory
                 .newInstance().getXFire());
-        String url = "http://localhost:8080/ws/services/getCKXX";
+        String url = "http://localhost:8080/services/getCKXX";
         IgetCKXX igetCKXX = (IgetCKXX) factory.create(service,url);
-        System.out.println("------------------------"+igetCKXX.getCKXX("client-------------test"));
+        System.out.println("------------------------"+igetCKXX.getCKXX("t_user"));
     }
 }
